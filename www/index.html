@@ -15,13 +15,80 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon" />
     <title>Document</title>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">header</header>
+      <header class="header">
+        <div class="header-top py-1">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 col-sm-4">
+                <div class="header-top-phone d-flex align-items-center h-100">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  <a href="tel:+12345678900" class="ms-2">+12345678900</a>
+                </div>
+              </div>
+              <div class="col-sm-4 d-none d-sm-block">
+                <ul class="social-icons d-flex justify-content-center">
+                  <li>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6 col-sm-4">
+                <div class="d-flex justify-content-end">
+                  <div class="btn-group me-2">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-sm dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Account
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sign In</a></li>
+                        <li><a class="dropdown-item" href="#">Sign Up</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-sm dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        EN
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">RU</a></li>
+                        <li><a class="dropdown-item" href="#">DE</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-middle bg-white py-2">Middle</div>
+      </header>
       <main class="main">main</main>
       <footer class="footer">footer</footer>
     </div>

@@ -92,18 +92,19 @@
         <!-- header-middle -->
         <div class="header-middle bg-white py-4">
           <div class="container-fluid">
-            <div class="row">
+            <div class="row align-items-center">
               <!-- logo -->
-              <div class="col-6 col-md-4">
+              <div class="col-sm-6 col-lg-4">
                 <a href="index.html" class="header-logo h1">E-Shop</a>
               </div>
               <!-- logo -->
               <!-- cart -->
-              <div class="col-6 col-md-4 order-md-2 cart-buttons text-end">
+              <div class="col-lg-4 order-lg-2 cart-buttons text-end d-none d-lg-block">
                 <a href="#" class="btn p-1">
                   <i class="fa-solid fa-heart"></i>
                   <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
                 </a>
+                <!-- cart-offcanvas-button -->
                 <button
                   class="btn p-1"
                   type="button"
@@ -114,47 +115,11 @@
                   <i class="fa-solid fa-cart-shopping"></i>
                   <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
                 </button>
-
-                <div
-                  class="offcanvas offcanvas-end"
-                  tabindex="-1"
-                  id="offcanvasCart"
-                  aria-labelledby="offcanvasCartLabel"
-                >
-                  <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasCartLabel">Offcanvas</h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <div>
-                      Some text as placeholder. In real life you can have the elements you have
-                      chosen. Like, text, images, lists, etc.
-                    </div>
-                    <div class="dropdown mt-3">
-                      <button
-                        class="btn btn-secondary dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                      >
-                        Dropdown button
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <!-- cart-offcanvas-button -->
               </div>
               <!-- cart -->
               <!-- search -->
-              <div class="col-md-4 order-md-1 mt-2 mt-md-0">
+              <div class="col-sm-6 col-lg-4 order-lg-1 mt-2 mt-sm-0">
                 <form action="">
                   <div class="input-group">
                     <input
@@ -176,8 +141,264 @@
           </div>
         </div>
         <!-- header-middle -->
+        <!-- cart-offcanvas -->
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasCart"
+          aria-labelledby="offcanvasCartLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCartLabel">Cart</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements you have chosen.
+              Like, text, images, lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- cart-offcanvas -->
       </header>
-      <main class="main">main</main>
+      <!-- header-bottom -->
+      <div class="header-bottom sticky-top">
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+          <div class="container-fluid">
+            <!-- burger-button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- burger-button -->
+            <!-- burger-menu -->
+            <div
+              class="offcanvas offcanvas-start"
+              id="offcanvasNavbar"
+              tabindex="-1"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Catalog</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Payment</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      data-bs-auto-close="outside"
+                    >
+                      Catalog
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">Shoes</a></li>
+                      <li><a class="dropdown-item" href="#">Jeans</a></li>
+                      <li class="nav-item dropend">
+                        <a
+                          href="#"
+                          class="dropdown-item dropdown-toggle"
+                          data-bs-toggle="dropdown"
+                          data-bs-auto-close="outside"
+                        >
+                          Sportswear
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                          <li>
+                            <a href="#" class="dropdown-item">Men's sportswear</a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item">Women's sportswear</a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item">Baby's sportswear</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Coat</a></li>
+                      <li><a class="dropdown-item" href="#">Shirts</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- burger-menu -->
+            <!-- cart -->
+            <div class="d-block d-lg-none">
+              <a href="#" class="btn p-1">
+                <i class="fa-solid fa-heart"></i>
+                <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">3</span>
+              </a>
+              <!-- cart-offcanvas-button -->
+              <button
+                class="btn p-1"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasCart"
+                aria-controls="offcanvasCart"
+              >
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="badge text-bg-warning cart-badge bg-warning rounded-circle">5</span>
+              </button>
+              <!-- cart-offcanvas-button -->
+            </div>
+            <!-- cart -->
+          </div>
+        </nav>
+      </div>
+      <!-- header-bottom -->
+      <main class="main">
+        <div class="container-fluid">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores reprehenderit
+            deleniti rem accusamus natus? Consequuntur, hic est. Dicta alias vitae doloremque
+            dolorem nobis, nisi exercitationem pariatur inventore dignissimos nesciunt distinctio!
+          </p>
+          <p>
+            Laboriosam modi illum enim, quidem reprehenderit at odit commodi maiores officiis
+            aperiam possimus unde reiciendis quaerat nobis ipsum sequi aliquid ut perspiciatis
+            autem, provident iure itaque incidunt eum. Nemo, magni.
+          </p>
+          <p>
+            Cum maiores esse veniam praesentium aperiam ad et nemo tempora tempore eos ducimus
+            voluptates neque sunt, placeat, excepturi error veritatis rem. Vel earum et reiciendis a
+            consequuntur accusamus adipisci quam.
+          </p>
+          <p>
+            Autem, fugiat, sint optio accusantium quam magnam eaque dolorem reiciendis dolorum vel
+            minus impedit in nesciunt officia iste repellat tempora laborum, amet quaerat placeat!
+            Deleniti, in tempore? Eum, fugit sequi!
+          </p>
+          <p>
+            Distinctio ducimus voluptates nesciunt soluta, ipsa, aliquam vitae deleniti sed numquam
+            nulla, inventore dignissimos hic voluptatum. Porro cum odio libero. Doloremque maiores
+            sed eaque alias ipsam labore quia ullam dolorum.
+          </p>
+          <p>
+            Blanditiis architecto impedit voluptatem sequi molestias, provident similique adipisci
+            nisi non quidem quod veritatis dolores excepturi laborum exercitationem amet id cum
+            reprehenderit libero ipsa qui illum laboriosam earum nostrum. Illo?
+          </p>
+          <p>
+            Reiciendis, ad et? Vero accusamus minima, necessitatibus repudiandae dicta beatae
+            tempore eum deserunt accusantium sunt praesentium mollitia at quod, earum, harum
+            quisquam ullam repellat architecto error et totam commodi deleniti?
+          </p>
+          <p>
+            Nesciunt inventore repellendus maxime? Nobis, saepe aperiam. Aspernatur minus, ducimus
+            laborum maxime magnam sequi itaque! Ratione veniam maiores totam esse accusantium
+            eligendi vitae, non consectetur. Sunt incidunt excepturi voluptatibus accusamus!
+          </p>
+          <p>
+            Esse eligendi ipsam ex voluptates numquam deserunt. Iusto architecto commodi culpa
+            voluptatum repellat aperiam tempora maiores exercitationem velit fugiat magnam saepe
+            quod consequatur tenetur nihil unde, et sequi laboriosam incidunt?
+          </p>
+          <p>
+            Officiis debitis veritatis quam vitae perspiciatis illo, deserunt modi ipsam architecto
+            vel! Aliquam cupiditate, eos nesciunt voluptate tempore debitis sit commodi dolores
+            repudiandae quisquam delectus placeat! Dicta officia veniam atque?
+          </p>
+          <p>
+            Obcaecati ab reiciendis fuga possimus laborum nam, similique odio, maiores repellat
+            dolorem, voluptate numquam dicta omnis tenetur libero corporis at eveniet! Fugiat, velit
+            natus. Quibusdam ab inventore aliquid beatae accusantium!
+          </p>
+          <p>
+            Nulla iusto sint quia blanditiis maxime nam ipsum voluptatum enim, vitae aliquid
+            similique cupiditate dicta quae fugit unde voluptate nihil ex voluptates error quas a.
+            Voluptatum eligendi incidunt asperiores quos!
+          </p>
+          <p>
+            Enim facere magni labore non qui alias tenetur, error beatae repellat ratione, earum
+            porro ut ex quaerat perspiciatis ipsam temporibus. Culpa eveniet eaque provident
+            blanditiis, error amet libero iure molestias.
+          </p>
+          <p>
+            Commodi autem praesentium optio beatae velit illum accusamus, adipisci, eveniet
+            perspiciatis tenetur doloribus culpa. Minima iste sequi accusantium perferendis
+            exercitationem repudiandae, rerum officia suscipit, itaque labore atque at praesentium
+            molestiae?
+          </p>
+          <p>
+            Nam repellendus veritatis libero rem laboriosam repudiandae dolor reiciendis harum ut,
+            impedit quasi cumque consectetur esse corrupti ad ducimus assumenda numquam ratione
+            blanditiis doloremque veniam ex. Eaque voluptates cupiditate sapiente!
+          </p>
+          <p>
+            Deleniti non vero est necessitatibus optio dolore facilis quia minus deserunt quidem
+            voluptas fugiat, qui esse dignissimos temporibus in corrupti maxime nam officiis.
+            Debitis a ipsa porro quo distinctio? Neque.
+          </p>
+          <p>
+            Aliquid, minus possimus blanditiis corrupti maxime debitis obcaecati! Quos earum
+            reprehenderit ab deserunt veniam aliquam vero sunt iure debitis ullam rerum delectus
+            eius eveniet facilis eligendi minima, consequatur magni dolores!
+          </p>
+          <p>
+            Maiores magnam quibusdam, rerum id ut hic voluptates. Perspiciatis accusamus aspernatur
+            tempore, laborum dolorum, cupiditate aut quidem tenetur maxime veniam autem explicabo
+            quae, dolores reiciendis error repellendus maiores vitae quos.
+          </p>
+          <p>
+            Quod, culpa doloremque molestias nobis ut perferendis exercitationem consectetur eum
+            quidem dignissimos omnis unde ullam modi sit, accusantium maiores rerum alias corrupti
+            ratione accusamus earum a tempore amet reiciendis! Vero.
+          </p>
+          <p>
+            Magni, tempore adipisci. Est nemo, sed rerum consequatur, laboriosam necessitatibus at,
+            quo officiis amet eaque dolor quos inventore repellat nulla ut quasi modi rem sint eius
+            earum a illum repudiandae.
+          </p>
+        </div>
+      </main>
       <footer class="footer">footer</footer>
     </div>
     <script
